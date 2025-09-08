@@ -7,12 +7,12 @@ interface SidebarProps {
 
 export function Sidebar({ activeCategory, onCategoryChange }: SidebarProps) {
   const categories = [
-    { id: "dashboard", label: "Dashboard", icon: "📊" },
-    { id: "Room work", label: "Room work", icon: "🏠" },
-    { id: "Electrical", label: "Electrical", icon: "⚡" },
-    { id: "Carpenter", label: "Carpenter", icon: "🔨" },
-    { id: "Washroom", label: "Washroom", icon: "🚿" },
-    { id: "Vending", label: "Vending", icon: "🥤" },
+    { id: "dashboard", label: "Dashboard" },
+    { id: "Room work", label: "Room work" },
+    { id: "Electrical", label: "Electrical"},
+    { id: "Carpenter", label: "Carpenter"},
+    { id: "Washroom", label: "Washroom"},
+    { id: "Vending", label: "Vending"},
   ]
 
   return (
@@ -31,7 +31,7 @@ export function Sidebar({ activeCategory, onCategoryChange }: SidebarProps) {
             key={category.id}
             onClick={() => onCategoryChange(category.id)}
             className={`w-full text-left px-4 py-3 rounded-lg transition-colors ${
-              activeCategory === category.id ? "bg-cyan-700 bg-opacity-50" : "hover:bg-cyan-700 hover:bg-opacity-30"
+              activeCategory === category.id ? "bg-cyan-900 bg-opacity-50" : "hover:bg-cyan-900 hover:bg-opacity-50"
             }`}
           >
             <span className="mr-3">{category.icon}</span>
